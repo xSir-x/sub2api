@@ -23,7 +23,7 @@ server:
   # Frontend base URL used to generate external links in emails (e.g. password reset)
   # 用于生成邮件中的外部链接（例如：重置密码链接）的前端基础地址
   # Example: "https://example.com"
-  frontend_url: ""
+  frontend_url: "https://43.132.187.129:3000"
   # Trusted proxies for X-Forwarded-For parsing (CIDR/IP). Empty disables trusted proxies.
   # 信任的代理地址（CIDR/IP 格式），用于解析 X-Forwarded-For 头。留空则禁用代理信任。
   trusted_proxies: []
@@ -73,7 +73,7 @@ run_mode: "standard"
 cors:
   # Allowed origins list. Leave empty to disable cross-origin requests.
   # 允许的来源列表。留空则禁用跨域请求。
-  allowed_origins: []
+  allowed_origins: [”http://localhost:3000”]
   # Allow credentials (cookies/authorization headers). Cannot be used with "*".
   # 允许携带凭证（cookies/授权头）。不能与 "*" 通配符同时使用。
   allow_credentials: true
@@ -86,7 +86,7 @@ security:
   url_allowlist:
     # Enable URL allowlist validation (disable to skip all URL checks)
     # 启用 URL 白名单验证（禁用则跳过所有 URL 检查）
-    enabled: false
+    enabled: true
     # Allowed upstream hosts for API proxying
     # 允许代理的上游 API 主机列表
     upstream_hosts:
@@ -107,10 +107,10 @@ security:
     crs_hosts: []
     # Allow localhost/private IPs for upstream/pricing/CRS (use only in trusted networks)
     # 允许本地/私有 IP 地址用于上游/定价/CRS（仅在可信网络中使用）
-    allow_private_hosts: true
+    allow_private_hosts: false
     # Allow http:// URLs when allowlist is disabled (default: false, require https)
     # 白名单禁用时是否允许 http:// URL（默认: false，要求 https）
-    allow_insecure_http: true
+    allow_insecure_http: false
   response_headers:
     # Enable configurable response header filtering (default: true)
     # 启用可配置的响应头过滤（默认启用，过滤上游敏感响应头）
@@ -750,16 +750,16 @@ concurrency:
 database:
   # Database host address
   # 数据库主机地址
-  host: "localhost"
+  host: "10.0.0.7"
   # Database port
   # 数据库端口
   port: 5432
   # Database username
   # 数据库用户名
-  user: "postgres"
+  user: "pengya"
   # Database password
   # 数据库密码
-  password: "your_secure_password_here"
+  password: "!Hans1993"
   # Database name
   # 数据库名称
   dbname: "sub2api"
@@ -828,7 +828,7 @@ jwt:
   # IMPORTANT: Change this to a random string in production!
   # 重要：生产环境中请更改为随机字符串！
   # Generate with / 生成命令: openssl rand -hex 32
-  secret: "change-this-to-a-secure-random-string"
+  secret: "8c88032442278d903b2c1809669edaf50b418e3e3f5481fc583ac2f905095854"
   # Token expiration time in hours (max 168)
   # 令牌过期时间（小时，最大 168）
   expire_hour: 24
@@ -851,7 +851,7 @@ totp:
   # 如果留空，每次启动将生成随机密钥，导致现有的 TOTP 配置失效（用户无法使用
   # 双因素认证登录）。
   # Generate with / 生成命令: openssl rand -hex 32
-  encryption_key: ""
+  encryption_key: "5ed6265d8e1da07f30a085107baa31ba2b0c8a872e62e1e8544254afb94bc54b"
 
 # =============================================================================
 # LinuxDo Connect OAuth Login (SSO)
@@ -925,7 +925,7 @@ oidc_connect:
 default:
   # Initial admin account (created on first run)
   # 初始管理员账户（首次运行时创建）
-  admin_email: "admin@example.com"
+  admin_email: "admin@yachang.com"
   admin_password: "admin123"
 
   # Default settings for new users
