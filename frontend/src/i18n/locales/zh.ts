@@ -46,12 +46,12 @@ export default {
       subtitle: '简单三步，开始省心使用 AI'
     },
     features: {
-      unifiedGateway: '一键接入',
-      unifiedGatewayDesc: '获取一个 API 密钥，即可调用所有已接入的 AI 模型，无需分别申请。',
-      multiAccount: '稳定可靠',
-      multiAccountDesc: 'Claude等官方模型，绝不掺水，小本买卖，童叟无欺',
-      balanceQuota: '人民币充值，美金到账',
-      balanceQuotaDesc: '充1人民币，有1美金的余额，按官方实际使用量计费，支持设置配额上限，团队用量一目了然。'
+      unifiedGateway: '第一步:注册账户获取体验额度',
+      unifiedGatewayDesc: '注册账号即可获得免费额度试用，满意后可按需购买，有按量充值',
+      multiAccount: '第二步:获取你的API KEY',
+      multiAccountDesc: '在你的AI编程工具或者Agent工具中按照官方文档配置BASE_URL和API KEY即可开始使用,享受AI编程的快乐',
+      balanceQuota: '第三步:按需充值或订阅',
+      balanceQuotaDesc: '人民币1:1兑换美金额度，充值或订阅后即可获得更多额度，按量计费，使用多少付多少，避免浪费，邀请新人能获得更多免费额度'
     },
     // 优势对比
     comparison: {

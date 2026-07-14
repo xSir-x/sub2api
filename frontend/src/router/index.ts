@@ -161,11 +161,14 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/quickStart',
-    name: '快速开始',
+    name: 'quickStart',
     component: () => import('@/views/user/UserGuideView.vue'),
     meta: {
       requiresAuth: true,
-      requiresAdmin: false
+      requiresAdmin: false,
+      title: 'Redeem Code',
+      titleKey: 'redeem.title',
+      descriptionKey: 'redeem.description'      
     }
   },
   {
