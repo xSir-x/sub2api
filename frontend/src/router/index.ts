@@ -160,6 +160,15 @@ const routes: RouteRecordRaw[] = [
     redirect: '/home'
   },
   {
+    path: '/quickStart',
+    name: '快速开始',
+    component: () => import('@/views/user/UserGuideView.vue'),
+    meta: {
+      requiresAuth: true,
+      requiresAdmin: false
+    }
+  },
+  {
     path: '/dashboard',
     name: 'Dashboard',
     component: () => import('@/views/user/DashboardView.vue'),

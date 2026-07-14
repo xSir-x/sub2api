@@ -77,6 +77,18 @@ const guides = ref([
   {
     title: '使用指南 3',
     image: '/guides/guide-3.png'
+  },
+  {
+    title: '使用指南 4',
+    image: '/guides/guide-4.png'
+  },
+  {
+    title: '使用指南 5', 
+    image: '/guides/guide-5.png'
+  },
+  {
+    title: '使用指南 6',
+    image: '/guides/guide-6.png'
   }
   // 继续添加更多指南...
 ])
