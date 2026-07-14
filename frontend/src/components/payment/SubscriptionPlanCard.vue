@@ -39,10 +39,10 @@
 
       <!-- Group quota info (compact) -->
       <div class="mb-3 grid grid-cols-2 gap-x-3 gap-y-1 rounded-lg bg-gray-50 px-3 py-2 text-xs dark:bg-dark-700/50">
-        <div class="flex items-center justify-between">
+        <!-- <div class="flex items-center justify-between">
           <span class="text-gray-400 dark:text-dark-500">{{ t('payment.planCard.rate') }}</span>
           <span class="font-medium text-gray-700 dark:text-gray-300">{{ rateDisplay }}</span>
-        </div>
+        </div> -->
         <div v-if="plan.daily_limit_usd != null" class="flex items-center justify-between">
           <span class="text-gray-400 dark:text-dark-500">{{ t('payment.planCard.dailyLimit') }}</span>
           <span class="font-medium text-gray-700 dark:text-gray-300">${{ plan.daily_limit_usd }}</span>
@@ -59,7 +59,7 @@
           <span class="text-gray-400 dark:text-dark-500">{{ t('payment.planCard.quota') }}</span>
           <span class="font-medium text-gray-700 dark:text-gray-300">{{ t('payment.planCard.unlimited') }}</span>
         </div>
-        <div v-if="modelScopeLabels.length > 0" class="col-span-2 flex items-center justify-between">
+        <!-- <div v-if="modelScopeLabels.length > 0" class="col-span-2 flex items-center justify-between">
           <span class="text-gray-400 dark:text-dark-500">{{ t('payment.planCard.models') }}</span>
           <div class="flex flex-wrap justify-end gap-1">
             <span v-for="scope in modelScopeLabels" :key="scope"
@@ -67,7 +67,7 @@
               {{ scope }}
             </span>
           </div>
-        </div>
+        </div> -->
       </div>
 
       <!-- Features list (compact) -->
@@ -135,22 +135,22 @@ const discountText = computed(() => {
   return pct > 0 ? `-${pct}%` : ''
 })
 
-const rateDisplay = computed(() => {
-  const rate = props.plan.rate_multiplier ?? 1
-  return `×${Number(rate.toPrecision(10))}`
-})
+// const rateDisplay = computed(() => {
+//   const rate = props.plan.rate_multiplier ?? 1
+//   return `×${Number(rate.toPrecision(10))}`
+// })
 
-const MODEL_SCOPE_LABELS: Record<string, string> = {
-  claude: 'Claude',
-  gemini_text: 'Gemini',
-  gemini_image: 'Imagen',
-}
+// const MODEL_SCOPE_LABELS: Record<string, string> = {
+//   claude: 'Claude',
+//   gemini_text: 'Gemini',
+//   gemini_image: 'Imagen',
+// }
 
-const modelScopeLabels = computed(() => {
-  const scopes = props.plan.supported_model_scopes
-  if (!scopes || scopes.length === 0) return []
-  return scopes.map(s => MODEL_SCOPE_LABELS[s] || s)
-})
+// const modelScopeLabels = computed(() => {
+//   const scopes = props.plan.supported_model_scopes
+//   if (!scopes || scopes.length === 0) return []
+//   return scopes.map(s => MODEL_SCOPE_LABELS[s] || s)
+// })
 
 const validitySuffix = computed(() => {
   const u = props.plan.validity_unit || 'day'
