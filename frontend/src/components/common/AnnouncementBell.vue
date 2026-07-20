@@ -1,5 +1,6 @@
 <template>
   <div>
+    Quick Start
     <!-- 铃铛按钮 -->
     <button
       @click="openModal"
